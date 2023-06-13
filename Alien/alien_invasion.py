@@ -1,6 +1,6 @@
 import sys
 import pygame
-
+import game_functions as gf
 from settings import Settings
 from ship import Ship
 def run_game():
@@ -9,17 +9,12 @@ def run_game():
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     
     pygame.display.set_caption("Alien Invasion")# title for the windows
-    ship=Ship(screen) # make an instance of ship，and pass screen 
+    ship=Ship(ai_settings,screen) # make an instance of ship，and pass screen 
     
     while True :
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-        
+        gf.check_events(ship)
+        ship.update()
         # redraw the screen color during each pass through the loop
-        screen.fill(ai_settings.bg_color) # only takes one argument, a color
-        ship.blitme() # 
-        # redraw the screen during each pass through the loop
-        pygame.display.flip()
-        
+        gf.update_screen(ai_settings,screen,ship)
+
 run_game()

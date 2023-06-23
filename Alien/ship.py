@@ -17,7 +17,7 @@ class Ship:
          self.moving_left  = False 
          
          self.ship_speed_factor_right = 1.1
-         self.ship_speed_factor_left = 0.1 # in my keaboard, the left key speed is faster than that of right key
+         self.ship_speed_factor_left = 1.1 # in my keaboard, the left key speed is faster than that of right key
      def update(self):
          if self.moving_right and self.rect.right < self.screen_rect.right :
              self.rect.centerx += self.ship_speed_factor_right

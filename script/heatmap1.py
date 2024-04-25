@@ -40,8 +40,6 @@ plt.xlabel('f : Max fan-out$=2^f + 1$')
 plt.ylabel('l : Logic level$= L+l$ ')
 plt.show()
 
-# 数据已经按照您提供的格式排列，无需更改
-# 重新绘制热图
 
 
 

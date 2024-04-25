@@ -84,7 +84,7 @@ vmax1 = np.nanmax(data)
 vmax2= np.nanmax(data2)
 f_values = np.arange(6)
 l_values = np.arange(6)
-# 创建两个并排的子图
+
 fig, axes = plt.subplots(1, 2, figsize=(20, 8))
 
 # 在第一个子图上绘制第一个数据集的热图
